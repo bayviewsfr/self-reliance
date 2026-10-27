@@ -53,6 +53,8 @@ main .wrap{padding-block:30px 10px;display:grid;gap:34px}
 .tool .ic{font-size:34px;line-height:1}
 .tool + .tool{margin-top:14px}
 .tool p.note{color:var(--ink);font-size:13.5px;margin-top:8px}
+.tool ul.hl{margin:8px 0 0;padding-left:18px;display:grid;gap:3px;font-size:13.5px;color:var(--muted);max-width:68ch}
+.tool ul.hl b{color:var(--ink);font-weight:600}
 .tool h3{font-size:21px}
 .tool p{margin:4px 0 0;color:var(--muted);max-width:62ch}
 .tag{display:inline-block;font-size:11px;font-weight:700;border:1px solid var(--gold-ink);color:var(--gold-ink);border-radius:4px;padding:0 6px;margin-left:6px;vertical-align:2px;font-family:ui-monospace,Menlo,monospace}
@@ -108,7 +110,16 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
         <span class="ic" aria-hidden="true">🥫</span>
         <div>
           <h3>Storehouse Meal Planner <span class="tag">V12</span></h3>
-          <p>Plan two weeks of meals from the Bishop's Order for Food and Supplies. Recipes scale to your servings and the order form fills itself in, ready to download as a PDF.</p>
+          <p>Plan two weeks of meals using the items on the Bishop's Order for Food and Supplies. As you choose meals, the planner adds up every ingredient and fills in the order form for you.</p>
+          <ul class="hl">
+            <li><b>Over 300 recipes</b> for breakfast, lunch, dinner, side dishes, snacks and desserts, including quick heat-and-serve meals from the canned items</li>
+            <li><b>Filters</b> for gluten-free, dairy-free, vegetarian and vegan meals, a storehouse-items-only option, and a way to leave out ingredients you can't use</li>
+            <li><b>Recipes that scale</b> to the number of servings you choose, with an option to plan last night's dinner as the next day's lunch</li>
+            <li><b>Estimated nutrition</b> for every recipe and each day</li>
+            <li><b>Household and personal items</b> from the form, such as diapers and toiletries</li>
+            <li><b>A filled order form PDF</b> to download, or send straight to your elders quorum or Relief Society reviewer</li>
+            <li><b>Works on computers, iPhones and Android phones.</b> Your plan stays on your own device.</li>
+          </ul>
           <p class="note"><b>Approval required:</b> Orders from the bishops' storehouse must be approved by the bishop, through the elders quorum presidency or the Relief Society presidency.</p>
         </div>
         <a class="btn" href="meal-planner.html">Open the planner</a>
