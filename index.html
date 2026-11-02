@@ -61,6 +61,10 @@ main .wrap{padding-block:30px 10px;display:grid;gap:34px}
 
 .btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:6px;padding:10px 16px;background:var(--navy);color:#fff;border:1px solid var(--navy);white-space:nowrap}
 .btn:hover{background:var(--navy-2)}
+.btn.ghost{background:transparent;color:var(--navy);border-color:var(--navy);padding:8px 14px;font-size:14px}
+.btn.ghost:hover{background:var(--navy);color:#fff}
+.tool p.book{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:12px;color:var(--muted);font-size:13px}
+@media (prefers-color-scheme:dark){.btn.ghost{background:transparent;color:var(--gold);border-color:var(--gold)}.btn.ghost:hover{background:var(--gold);color:#1b1404}}
 @media (prefers-color-scheme:dark){.btn{background:var(--gold);border-color:var(--gold);color:#1b1404}.btn:hover{background:#e6b744}}
 
 .guides{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
@@ -79,6 +83,9 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
 @media (max-width:640px){
   .tool{grid-template-columns:auto minmax(0,1fr)}
   .tool .btn{grid-column:1/-1;justify-self:start}
+  .tool{grid-template-columns:minmax(0,1fr);padding:16px}
+  .tool .ic{font-size:28px}
+  .tool p.book .btn{white-space:normal;text-align:left}
 }
 </style>
 </head>
@@ -109,19 +116,23 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
       <div class="tool">
         <span class="ic" aria-hidden="true">🥫</span>
         <div>
-          <h3>Storehouse Meal Planner <span class="tag">V14</span></h3>
-          <p>Plan two weeks of meals using the items on the Bishop's Order for Food and Supplies. As you choose meals, the planner adds up every ingredient and fills in the order form for you.</p>
+          <h3>Storehouse Meal Planner <span class="tag">V22</span></h3>
+          <p>Plan one or two weeks of meals using the items on the Bishop's Order for Food and Supplies. As you choose meals, the planner adds up every ingredient and fills in the order form for you.</p>
           <ul class="hl">
             <li><b>Over 300 recipes</b> for breakfast, lunch, dinner, side dishes, snacks and desserts, including quick heat-and-serve meals from the canned items</li>
             <li><b>Filters</b> for gluten-free, dairy-free, vegetarian and vegan meals, a storehouse-items-only option, and a way to leave out ingredients you can't use</li>
             <li><b>Lower sodium and lower sugar options</b> that cut salt and sweeteners in the recipes and hide the saltiest and most sugary dishes</li>
-            <li><b>Recipes that scale</b> to the number of servings you choose, with an option to plan last night's dinner as the next day's lunch</li>
-            <li><b>Estimated nutrition</b> for every recipe and each day, including sodium and added sugar</li>
+            <li><b>Household sizing</b> for adults, teens, children and toddlers, so every recipe and order quantity fits your family, with an option to plan last night's dinner as the next day's lunch</li>
+            <li><b>Estimated nutrition</b> for every recipe, plus daily calories for each member of the household</li>
+            <li><b>Fresh-item alerts</b> that warn when lettuce, bananas, milk and other perishables would spoil before they're used, with one-tap swaps</li>
             <li><b>A shopping list with estimated costs</b> for anything not on the order form, with an option to price the whole plan at the store</li>
+            <li><b>Serving sizes for every age</b>, with options to scale recipes down 5% to 20%, and a flag for recipes repeated too often</li>
+            <li><b>A printable recipe book</b> with serving sizes, estimated nutrition, lower-sodium and lower-sugar picks, and estimated costs</li>
             <li><b>Household and personal items</b> from the form, such as diapers and toiletries</li>
             <li><b>A filled order form PDF</b> to download, or send straight to your elders quorum or Relief Society reviewer</li>
             <li><b>Works on computers, iPhones and Android phones.</b> Your plan stays on your own device.</li>
           </ul>
+          <p class="book"><a class="btn ghost" href="storehouse-meal-planner-recipe-book.pdf" download>📖 Download the recipe book (PDF)</a> <span>All 302 recipes · 188 pages · 0.4 MB · V22. Estimated costs are October 2026 prices, for planning only.</span></p>
           <p class="note"><b>Approval required:</b> Orders from the bishops' storehouse must be approved by the bishop, through the elders quorum presidency or the Relief Society presidency.</p>
         </div>
         <a class="btn" href="meal-planner.html">Open the planner</a>
@@ -187,7 +198,7 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
 <footer>
   <div class="wrap">
     <span>Not an official Church publication. Guides are compiled by local volunteers of the Wilmington Delaware Stake as a free community resource. Phone numbers, hours and program rules change; call to confirm before you go.</span>
-    <span>Site updated October 27, 2026.</span>
+    <span>Site updated November 2, 2026.</span>
   </div>
 </footer>
 </body>
