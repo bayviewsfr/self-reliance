@@ -55,6 +55,13 @@ main .wrap{padding-block:30px 10px;display:grid;gap:34px}
 .tool p.note{color:var(--ink);font-size:13.5px;margin-top:8px}
 .tool ul.hl{margin:8px 0 0;padding-left:18px;display:grid;gap:3px;font-size:13.5px;color:var(--muted);max-width:68ch}
 .tool ul.hl b{color:var(--ink);font-weight:600}
+.tool .about{margin-top:10px;display:grid;gap:4px;max-width:68ch}
+.tool .about h4{margin:6px 0 0;font-family:var(--f-display);font-stretch:85%;font-size:16px;color:var(--ink)}
+.tool .about p{margin:0;color:var(--ink);font-size:14px}
+.tool details.more{margin-top:10px;border:1px solid var(--line);border-radius:6px;padding:6px 12px;max-width:68ch}
+.tool details.more summary{cursor:pointer;font-weight:700;color:var(--navy)}
+@media (prefers-color-scheme:dark){.tool details.more summary{color:var(--gold)}}
+.tool details.more[open] ul.hl{margin:8px 0 4px}
 .tool h3{font-size:21px}
 .tool p{margin:4px 0 0;color:var(--muted);max-width:62ch}
 .tag{display:inline-block;font-size:11px;font-weight:700;border:1px solid var(--gold-ink);color:var(--gold-ink);border-radius:4px;padding:0 6px;margin-left:6px;vertical-align:2px;font-family:ui-monospace,Menlo,monospace}
@@ -116,8 +123,16 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
       <div class="tool">
         <span class="ic" aria-hidden="true">🥫</span>
         <div>
-          <h3>Storehouse Meal Planner <span class="tag">V22</span></h3>
+          <h3>Storehouse Meal Planner <span class="tag">V23</span></h3>
           <p>Plan one or two weeks of meals using the items on the Bishop's Order for Food and Supplies. As you choose meals, the planner adds up every ingredient and fills in the order form for you.</p>
+          <div class="about">
+            <h4>What is the bishops' storehouse?</h4>
+            <p>The bishops' storehouse is run by The Church of Jesus Christ of Latter-day Saints to help people in need with food and household supplies. Anyone in need, whether a member of the Church or not, can receive help with a referral from a bishop. The storehouse is funded by tithing and fast offerings from Church members. To ask for help, speak with your local bishop, who can talk with you about your needs.</p>
+            <h4>Two ways to use this planner</h4>
+            <p><b>With the bishops' storehouse:</b> If your bishop has approved help with food, plan your meals here and the planner fills in the Bishop's Order for Food and Supplies for you. Send it to your elders quorum or Relief Society presidency for review.</p>
+            <p><b>On your own:</b> You don't need a storehouse order to use the planner. Any family can use it to plan a week or two of meals, scale recipes to their household, print a recipe book, and build a shopping list with estimated costs to help with their grocery budget. Turn off <b>🏪 Storehouse items only</b> to see every recipe.</p>
+          </div>
+          <details class="more"><summary>More Information</summary>
           <ul class="hl">
             <li><b>Over 300 recipes</b> for breakfast, lunch, dinner, side dishes, snacks and desserts, including quick heat-and-serve meals from the canned items</li>
             <li><b>Filters</b> for gluten-free, dairy-free, vegetarian and vegan meals, a storehouse-items-only option, and a way to leave out ingredients you can't use</li>
@@ -132,7 +147,8 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
             <li><b>A filled order form PDF</b> to download, or send straight to your elders quorum or Relief Society reviewer</li>
             <li><b>Works on computers, iPhones and Android phones.</b> Your plan stays on your own device.</li>
           </ul>
-          <p class="book"><a class="btn ghost" href="storehouse-meal-planner-recipe-book.pdf" download>📖 Download the recipe book (PDF)</a> <span>All 302 recipes · 188 pages · 0.4 MB · V22. Estimated costs are October 2026 prices, for planning only.</span></p>
+          </details>
+          <p class="book"><a class="btn ghost" href="storehouse-meal-planner-recipe-book.pdf" download>📖 Download the recipe book (PDF)</a> <span>All 302 recipes · 188 pages · 0.4 MB · V23. Estimated costs are October 2026 prices, for planning only.</span></p>
           <p class="note"><b>Approval required:</b> Orders from the bishops' storehouse must be approved by the bishop, through the elders quorum presidency or the Relief Society presidency.</p>
         </div>
         <a class="btn" href="meal-planner.html">Open the planner</a>
