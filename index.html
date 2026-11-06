@@ -7,7 +7,18 @@
 <meta name="description" content="Bayview Ward Self Reliance Resources: free resource guides and the Storehouse Meal Planner, Wilmington Delaware Stake.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<script>/* remember the language: the planner uses the same setting */
+(function(){try{var q=new URLSearchParams(location.search).get("lang"),L=document.documentElement.lang;
+if(q==="en"||q==="es")localStorage.setItem("smp-lang",q);else if(L==="es")localStorage.setItem("smp-lang","es");
+else if(localStorage.getItem("smp-lang")==="es")location.replace("index-es.html");}catch(e){}})();</script>
 <style>
+.mast-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px}
+.lang{display:inline-flex;border:1.5px solid var(--gold);border-radius:999px;overflow:hidden;font-weight:700;font-size:14px}
+.lang a{color:#fff;text-decoration:none;padding:7px 14px;min-height:34px;display:inline-flex;align-items:center}
+.lang a[aria-current]{background:var(--gold);color:#1b1404}
+.lang a:not([aria-current]):hover{background:rgba(255,255,255,.12)}
+.guide .alt{font-size:13px;font-weight:600;color:var(--navy)}
+@media (prefers-color-scheme:dark){.guide .alt{color:var(--gold)}}
 /* Layout: navy masthead matching the guide covers, help-now strip, tool card, guide grid with covers, quiet footer */
 :root{
   --navy:#1c3152; --navy-2:#253f66; --gold:#d6a630; --gold-ink:#8a6410;
@@ -99,7 +110,8 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
 <body>
 <header class="mast">
   <div class="wrap">
-    <span class="eyebrow">Wilmington Delaware Stake</span>
+    <div class="mast-top"><span class="eyebrow">Wilmington Delaware Stake</span>
+      <nav class="lang" aria-label="Language / Idioma"><a href="./?lang=en" hreflang="en" lang="en" aria-current="page">English</a><a href="index-es.html" hreflang="es" lang="es">Español</a></nav></div>
     <h1>Bayview Ward Self Reliance Resources</h1>
     <p>Free guides and tools for members and neighbors who need help with food, housing, work, benefits and legal questions.</p>
     <div class="rule"></div>
@@ -123,7 +135,7 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
       <div class="tool">
         <span class="ic" aria-hidden="true">🥫</span>
         <div>
-          <h3>Storehouse Meal Planner <span class="tag">V33</span></h3>
+          <h3>Storehouse Meal Planner <span class="tag">V34</span></h3>
           <p>Plan one or two weeks of meals using the items on the Bishop's Order for Food and Supplies. As you choose meals, the planner adds up every ingredient and fills in the order form for you.</p>
           <div class="about">
             <h4>What is the bishops' storehouse?</h4>
@@ -148,11 +160,11 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
             <li><b>Works on computers, iPhones and Android phones.</b> Your plan stays on your own device.</li>
           </ul>
           </details>
-          <p class="book"><a class="btn ghost" href="storehouse-meal-planner-recipe-book.pdf" download>📖 Download the recipe book (PDF)</a> <span>All 406 recipes · 217 pages · 1.4 MB · V33. Estimated costs are October 2026 prices, for planning only.</span></p>
-          <p class="book" lang="es"><a class="btn ghost" href="meal-planner.html?lang=es">🌎 Abrir el planificador en español</a> <a class="btn ghost" href="storehouse-meal-planner-recipe-book-es.pdf" download>📖 Recetario en español (PDF)</a> <span>235 páginas · 1.5 MB. The planner also has an English | Español switch at the top.</span></p>
+          <p class="book"><a class="btn ghost" href="storehouse-meal-planner-recipe-book.pdf" download>📖 Download the recipe book (PDF)</a> <span>All 406 recipes · 217 pages · 1.4 MB · V34. Estimated costs are October 2026 prices, for planning only.</span></p>
+          <p class="book"><a class="btn ghost" href="meal-planner.html?lang=es" hreflang="es" lang="es">🌎 Planificador en español</a> <a class="btn ghost" href="storehouse-meal-planner-recipe-book-es.pdf" download hreflang="es" lang="es">📖 Recetario en español (PDF)</a> <span>The planner also has an English | Español switch at the top.</span></p>
           <p class="note"><b>Approval required:</b> Orders from the bishops' storehouse must be approved by the bishop, through the elders quorum presidency or the Relief Society presidency.</p>
         </div>
-        <a class="btn" href="meal-planner.html">Open the planner</a>
+        <a class="btn" href="meal-planner.html?lang=en">Open the planner</a>
       </div>
       <div class="tool">
         <span class="ic" aria-hidden="true">📊</span>
@@ -175,6 +187,7 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
             <p class="topics">Shelter for men, women, mothers and families · free meals · pantries, showers and mail · benefits · counseling · crisis support · cold weather</p>
             <span class="meta">33 pages · 2.1 MB · PDF</span>
             <a class="btn" href="emergency-housing-guide.pdf">Open guide</a>
+            <a class="alt" href="emergency-housing-guide-es.pdf" hreflang="es">También en español (PDF)</a>
           </div>
         </article>
         <article class="guide">
@@ -185,6 +198,7 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
             <p class="topics">Food · cash help · health coverage · unemployment · utilities · housing · disability · seniors · veterans · tax credits</p>
             <span class="meta">49 pages · 3.3 MB · PDF</span>
             <a class="btn" href="community-assistance-guide.pdf">Open guide</a>
+            <a class="alt" href="community-assistance-guide-es.pdf" hreflang="es">También en español (PDF)</a>
           </div>
         </article>
         <article class="guide">
@@ -195,6 +209,7 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
             <p class="topics">Resumes · cover letters · job boards · recruiters · interviews · second chances · senior placement · free job help nearby</p>
             <span class="meta">34 pages · 2.3 MB · PDF</span>
             <a class="btn" href="finding-work-guide.pdf">Open guide</a>
+            <a class="alt" href="finding-work-guide-es.pdf" hreflang="es">También en español (PDF)</a>
           </div>
         </article>
         <article class="guide">
@@ -205,6 +220,7 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
             <p class="topics">Protective orders · divorce · custody · child support · help for single fathers and single mothers · county legal aid</p>
             <span class="meta">38 pages · 2.6 MB · PDF</span>
             <a class="btn" href="free-legal-help-guide.pdf">Open guide</a>
+            <a class="alt" href="free-legal-help-guide-es.pdf" hreflang="es">También en español (PDF)</a>
           </div>
         </article>
       </div>
@@ -215,7 +231,7 @@ footer .wrap{padding-block:18px calc(28px + env(safe-area-inset-bottom,0px));fon
 <footer>
   <div class="wrap">
     <span>Not an official Church publication. Guides are compiled by local volunteers of the Wilmington Delaware Stake as a free community resource. Phone numbers, hours and program rules change; call to confirm before you go.</span>
-    <span>Site updated November 5, 2026.</span>
+    <span>Site updated November 6, 2026.</span>
   </div>
 </footer>
 </body>
